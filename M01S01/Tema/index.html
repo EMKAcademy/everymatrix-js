@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form class="rectangle-form">
+    <fieldset>
+      <legend>Calculator geometrie</legend>
+      <label for="length">Lungime:</label>
+      <input type="text"
+        id="length"
+        name="length"
+        placeholder="Lungime">
+        <br><br>
+
+        <label for="width">Latime:</label>
+      <input type="text"
+        id="width"
+        name="width"
+        placeholder="Latime">
+
+        <label for="height">Inaltime:</label>
+        <input type="text"
+          id="height"
+          name="height"
+          placeholder="inaltime">
+        <hr>
+        <label for="range">Raza</label>
+        <input type="text"
+          id="range"
+          name="range"
+          placeholder="Raza">
+      <input type="submit" value="Calculeaza">
+    </fieldset>
+    <fieldset>
+      <legend>Rezultate</legend>
+      <p>Arie Dreptunghi : <span id="resultsurface"></span></p>
+      <p>Volum paralelipiped : <span id="resultvolume"></span></p>
+      <hr>
+      <p>Aria Cercului: <span id="resultSC"></span></p>
+      <p>Volumul Sferei: <span id="resultVS"></span></p>
+      <p>Aria Sferei: <span id="resultAS"></span></p>
+    </fieldset>
+  </form>
+  <script src="app.js"></script>
+</body>
+</html>
