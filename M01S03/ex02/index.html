@@ -7,7 +7,49 @@
   <body>
 
     <script>
-
+      var person = {
+        name: 'Catalin',
+        surname: 'Curelea',
+        age: 32,
+        petOwner: false,
+        skills: {
+          css: true,
+          html:true,
+          javascript:true
+        },
+        friends: {
+          larry: {
+            name: 'Larry',
+            surname: 'Larryson',
+            age:30
+          },
+          Steven: {
+            name: 'Steven',
+            surname: 'Stevenson',
+            age: 23
+          },
+          carol: {
+            name: 'Carol',
+            surname: 'Dancila',
+            age: 56
+          }
+        }
+      };
+      console.log(person.friends.larry);
+      console.log(person.skills.javascript);
+      console.log(person.friends.carol.age);
+      console.log(2019-person.friends.larry.age);
+      console.log(`${person.friends.larry.name} este cu ${person.friends.larry.age - person.friends.Steven.age} ani mai mare decat ${person.friends.Steven.name}`);
+      console.log('Prietenul meu ' + person.friends.Steven.name + ' ' + person.friends.Steven.surname + ' are ' + person.friends.Steven.age + ' ani');
+      console.log(`Prietenii mei sunt: ${person.friends.larry.name}, ${person.friends.Steven.name} si ${person.friends.carol.name}`);
+      console.log(person.friends.Steven.surname.length);
+      console.log(person.friends.carol.age);
+      console.log(`Steven e nascut in ${2019-person.friends.Steven.age} iar Carol e nascuta in ${2019-person.friends.carol.age}`)
+      console.log(`Carol e cu ${person.friends.carol.age - person.friends.Steven.age} ani mai mare decat ${person.friends.Steven.name}`);
+      console.log(`Prietena mea ${person.friends.carol.name + ' ' + person.friends.carol.surname} are ${person.friends.carol.age} ani.`);
+      console.log(`Prietenii mei sunt ${person.friends.larry.name}, ${person.friends.Steven.name} si ${person.friends.carol.name}`);
+      console.log(person.friends.larry.surname.length);
+      console.log(person.friends.Steven.surname.length-person.friends.carol.surname.length);
     </script>
   </body>
 </html>
