@@ -11,6 +11,18 @@
 <body>
   <div class="container">
     <h1 class="text-center">Number Guessing</h1>
+    <form class="form-group text-center" id="options">
+        <fieldset>
+            <legend>Options</legend>
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty">
+              <option value="1">Easy</option>
+              <option value="2">Normal</option>
+              <option value="3">Hard</option>
+            </select>
+            <input type="submit" value="Accept">
+          </fieldset>
+    </form>
     <form class="form-group text-center" id="game">
       <fieldset>
         <legend>Can you guess my number?</legend>
