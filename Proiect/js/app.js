@@ -1,50 +1,60 @@
-var inputNumber=document.getElementById('user-number');
+var inputElement=document.getElementById('user-number');
 var form=document.getElementById('game');
 var option=document.getElementById('options');
 var difficulty=document.getElementById('difficulty');
-
+var generatedNumber=0;
 // console.log(level);
+var difficultyMap = {
+  easy: 10,
+  medium: 100,
+  hard: 1000
+};
+var selectedDifficulty=difficultyMap['easy']
+
+
+
+function startGame(difLevel) {
+  generatedNumber=Math.ceil(Math.random()*difLevel);
+  selectedDifficulty=difLevel;
+  console.log(generatedNumber);
+
+}
+
 
 option.addEventListener('submit', function(evt){
-  level=difficulty.options[difficulty.selectedIndex].value;
-  console.log(level);
-  if (level==1) {
-  var  difLevel=10;
-  }
-  if (level==2) {
-   var difLevel=100;
-  }
-  if (level==3) {
-    var difLevel=1000;
-  }
-
+  var level=difficulty.options[difficulty.selectedIndex].value;
+  startGame(difficultyMap[level]);
   evt.preventDefault();
-  generatedNumber=Math.ceil(Math.random()*difLevel);
-  console.log(generatedNumber);
-})
+  
+ 
+});
 
 
 
 
 form.addEventListener('submit', function(evt){
-  inputNumber=inputNumber.value;
+  inputNumber=inputElement.value;
   if(inputNumber>generatedNumber){
     alert('Numarul introdus e mai mare.')
   }
   
-    if(inputNumber<generatedNumber){
-      alert('Numarul introdus e mai mic.')
-    }
-    if(inputNumber==generatedNumber){
-      alert('Ai ghicit.')
-      location.reload();
-    }
+  if(inputNumber<generatedNumber){
+    alert('Numarul introdus e mai mic.')
+  }
+  if(inputNumber==generatedNumber){
+    alert('Ai ghicit.');
+    startGame(selectedDifficulty);
+
+    
+  }
   
-console.log(generatedNumber);
+
   evt.preventDefault();
 })
 
 form.addEventListener('reset', function(evt){
-  location.reload();
+  startGame(selectedDifficulty);
   evt.preventDefault()
 })
+
+startGame(selectedDifficulty);
