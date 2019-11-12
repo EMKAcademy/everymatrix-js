@@ -6,7 +6,7 @@ var difficulty=document.getElementById('difficulty');
 // console.log(level);
 
 option.addEventListener('submit', function(evt){
-  var level=difficulty.options[difficulty.selectedIndex].value;
+  level=difficulty.options[difficulty.selectedIndex].value;
   console.log(level);
   if (level==1) {
   var  difLevel=10;
@@ -19,7 +19,7 @@ option.addEventListener('submit', function(evt){
   }
 
   evt.preventDefault();
-  var generatedNumber=Math.ceil(Math.random()*difLevel);
+  generatedNumber=Math.ceil(Math.random()*difLevel);
   console.log(generatedNumber);
 })
 
@@ -31,16 +31,16 @@ form.addEventListener('submit', function(evt){
   if(inputNumber>generatedNumber){
     alert('Numarul introdus e mai mare.')
   }
-  else{
+  
     if(inputNumber<generatedNumber){
       alert('Numarul introdus e mai mic.')
     }
-    else{
+    if(inputNumber==generatedNumber){
       alert('Ai ghicit.')
       location.reload();
     }
-  }
-
+  
+console.log(generatedNumber);
   evt.preventDefault();
 })
 
