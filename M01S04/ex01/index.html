@@ -6,6 +6,59 @@
 </head>
 <body>
 
+    <p id="message"></p>
+    <p id="nameDisplay"></p>
+    <p id="message5"></p>
+    <p id="message6"></p>
+
+    <script>
+    //     var value=window.prompt(),
+    //         inputName=window.prompt(),
+    //         nameDisplay=document.getElementById('nameDisplay'),
+    //         paragraph=document.getElementById('message'),
+    //         nameLength=inputName.length,
+    //         message='Numarul este';
+    //     console.log('Valuarea este ' + value);
+    //     nameDisplay.innerText='Numele meu este '+inputName +' si are' + nameLength + " caractere";
+
+
+      
+    //     if(value % 2 === 0) {
+    //     message += ' par.';
+    //     // message = message +
+    //     }
+    //     else{
+    //     message += ' impar.'
+    //     }
+    //     paragraph.innerText= message;
+
+    //     if(value > 20){
+    //         paragraph.innerText=message+ " mai mare ca 20";
+    //     };
+
+    //     if(value < 20){
+    //         paragraph.innerText=message + " mai mic ca 20";
+    // };
+        // var name = prompt('Numele tau'),
+        //     para5 = document.getElementById('message5'),
+        //     message5 = '';
+
+            var secondName=prompt('Numele tau, din nou'),
+                para6=document.getElementById('message6'),
+                message6 = '';
+
+                if (secondName.includes('a')) {
+                    message6 = 'Nuemele introdus contine litera a';
+
+                } else {
+                    message6 = 'Numele introdus nu contine litera a';
+                }
+
+                para6.innerText=message6;
+
+            para5.innerText = `Numele intordus are ${name.replace(' ','').length}`;
+
+    </script>
 
 </body>
 </html>
