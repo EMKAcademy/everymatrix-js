@@ -42,3 +42,30 @@ for (let i = 0; i < person.friends.length; i++) {
  }
   console.log(sentence);
 }
+
+console.warn('***********************');
+let ageSum=0;
+for (let i = 0; i < person.friends.length; i++) {
+  ageSum = ageSum + person.friends[i].age;
+  if( i == person.friends.length-1) {
+   console.log(ageSum);
+
+  }
+}
+localStorage.setItem('ageSum',ageSum);
+localStorage.setItem('person',JSON.stringify(person));
+console.warn ('**********************************');
+let ageDif = person.age;
+for (let i = 0; i < person.friends.length; i++) {
+  ageDif = person.age - person.friends[i].age;
+  console.log(ageDif);
+  console.log(`Intre Dragos si ${person.friends[i].name} este o diferenta de ${ageDif}`);
+}
+console.warn ('**********************************');
+let sentenceReloaded='Prietenii mei sunt ';
+for (let i = person.friends.length-1; i >= 0; i--) {
+  sentenceReloaded += `${person.friends[i].name}`;
+  
+
+}
+console.log(sentenceReloaded);
