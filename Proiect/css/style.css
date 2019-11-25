@@ -1,0 +1,45 @@
+#user-number {
+    width: 100px;
+    margin: auto;
+}
+
+#difficulty {
+    width: 100px;
+    margin: 10px auto;
+}
+
+.container {
+    border-radius: 10px;
+    margin: 35px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 3px 3px white;
+    background: linear-gradient(rgb(96, 163, 163),rgb(96, 163, 163),white,rgb(96, 163, 163),rgb(96, 163, 163));
+    opacity: 0.98;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+h1, legend, label {
+    color: white;
+}
+
+#usedNumbers, .usedNumbers {
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+
+#timebar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(crimson,red,crimson);
+    
+    border-radius: 300px;
+    transition: width 0.2s;
+    margin:auto;
+}

@@ -11,28 +11,29 @@
 <body>
   <div class="container">
     <h1 class="text-center">Number Guessing</h1>
-    <form class="form-group text-center" id="options">
-        <fieldset>
-            <legend>Options</legend>
-            <label for="difficulty">Difficulty</label>
-            <select name="difficulty" id="difficulty">
-              <option value="easy">Easy</option>
-              <option value="medium">Normal</option>
-              <option value="hard">Hard</option>
-            </select>
-            <input type="submit" value="Accept">
-          </fieldset>
-    </form>
+    
     <form class="form-group text-center" id="game">
       <fieldset>
         <legend>Can you guess my number?</legend>
-        <input type="text" id="user-number">
-        <input type="submit" value="Am ghicit!" class="btn-primary">
-        <input type="reset" value="New Game" class="btn-danger">
+        <input type="text" class="form-control d-flex justify-content-center" id="user-number" autocomplete="off"><hr>
+        <input type="submit" value="Am ghicit!" class="btn-success col-3">   
+         <input type="reset" value="New Game" class="btn-danger col-3"><hr>
       </fieldset>
     </form>
-
-
+    <form class="form-group text-center" id="options">
+      <fieldset>
+          <legend>Options</legend>
+          <label for="difficulty">Difficulty</label>
+          <select name="difficulty" class="form-control col-3" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+          <input type="submit" class="btn-info col-3" value="Accept">
+        </fieldset>
+  </form>
+  <p class="usedNumbers">Numere incercate: <span id="usedNumbers"></span></p>
+  <div id="timebar"></div>
   </div>
 
 
