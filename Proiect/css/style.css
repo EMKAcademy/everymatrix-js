@@ -37,9 +37,14 @@ h1, legend, label {
 #timebar {
     height: 10px;
     width: 100%;
-    background: linear-gradient(crimson,red,crimson);
+    background: limegreen;
     
     border-radius: 300px;
     transition: width 0.2s;
     margin:auto;
+}
+
+.container {
+    position: relative;
+    top: -1000px;
 }

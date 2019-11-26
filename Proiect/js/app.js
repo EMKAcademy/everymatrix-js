@@ -16,8 +16,17 @@ var selectedDifficulty=difficultyMap['easy'];
 function timer(){
   time=time-1
   console.log(time)
-  let rahat = document.getElementById('timebar');
-  rahat.style.width=time+'%';
+  let bar = document.getElementById('timebar');
+  if (time > 60) {
+    bar.style.background = 'limegreen';
+  }
+  if (time < 60) {
+    bar.style.background = 'yellow';
+  }
+  if (time < 30) {
+    bar.style.background = 'crimson';
+  }
+  bar.style.width=time+'%';
   if(time === 0){
   alert('Timpul a expirat')
   startGame(selectedDifficulty);
