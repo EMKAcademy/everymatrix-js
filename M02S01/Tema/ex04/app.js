@@ -76,7 +76,8 @@ class Car {
   changeColor(color) {
     this.carTop.style.backgroundColor = color; 
     this.carBody.style.backgroundColor = color;
-    this.hubCapFront.style.backgroundColor=color;
+    this.hubCapFront.style.backgroundColor = color;
+    this.hubCapBack.style.backgroundColor = color;
   }
   engageBreak() {
     this.lightBack.classList.add('light--on');
@@ -89,9 +90,9 @@ class Car {
       window.setTimeout(() =>{this.turnLightsOff()},2000)
       this.turnLightsOn();
      }
-     var hazard = setInterval(blink,3000);
+     this.intervalID = setInterval(blink,3000);
         if(this.areHazardsOn) {
-       window.clearInterval(hazard);
+       window.clearInterval(this.intervalID);
        this.areHazardsOn = false;
        return;
      }
