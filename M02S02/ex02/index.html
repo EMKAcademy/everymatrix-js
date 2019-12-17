@@ -23,15 +23,35 @@
       
       <br><br>
 
+      <label for="skill">Adauga skill</label>
+      <input type="text" name="skill" id="skillInput">
+      <button type="button" id="addSkill">+</button>
+
+      <br><br>
+
+      <input type="checkbox" name="hasPets" id="hasPets">
+      <label for="hasPets">Are animale de casa?</label>
+
+      <fieldset id="pet" style="display:none;">
+        <legend>Pet Details</legend>
+        <label for="petName">Numele animalului</label>
+        <input type="text" id="petName" name="petName">
+        <br><br>
+        <button type="button" id="addPetButton">+</button>
+      </fieldset>
+      <hr>
+
       <button type="submit">Adauga</button>
     </fieldset>
 
     <fieldset>
       <legend>Detalii</legend>
+      <div id="details">
+
+      </div>
     </fieldset>
   </form>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
