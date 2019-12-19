@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Person Form</title>        
+</head>
+<body>
+  <form id="personForm">
+    <fieldset>
+      <legend>Persoana</legend>
+      <label for="name">Nume:</label>
+      <input type="text" name="name"> 
+        
+      <br><br>
+
+      <label for="surname">Prenume:</label>
+      <input type="text" name="surname"> 
+
+      <br><br>
+
+      <label for="age">Varsta</label>
+      <input type="text" name="age">    
+      
+      <br><br>
+
+      <label for="skill">Adauga skill</label>
+      <input type="text" name="skill" id="skillInput">
+      <button type="button" id="addSkill">+</button>
+
+      <br><br>
+
+      <input type="checkbox" name="hasPets" id="hasPets">
+      <label for="hasPets">Are animale de casa?</label>
+
+      <fieldset id="pet" style="display:none;">
+        <legend>Pet Details</legend>
+        <label for="petName">Numele animalului</label>
+        <input type="text" id="petName" name="petName">
+        <label for="petSpecies">Specia de Animal</label>
+        <input type="text" id="petSpecies" name="petSpecies">
+        <label for="petAge">Varsta animalului</label>
+        <input type="text" id="petAge" name="petAge">
+        <br><br>
+        <button type="button" id="addPetButton">+</button>
+      </fieldset>
+      <hr>
+
+      <button type="submit">Adauga</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Detalii</legend>
+      <div id="details">
+
+      </div>
+    </fieldset>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>
