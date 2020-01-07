@@ -1,0 +1,30 @@
+legend, label, h2, input,input::placeholder{
+    color: white;
+}
+
+li{
+    height: 35px;
+    margin: 5px;
+    line-height: 35px;
+}
+ li button {
+     height: 35px;
+ }
+
+div{
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 5px lightblue;
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    
+}
+
+
+@keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
